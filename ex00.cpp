@@ -1,6 +1,7 @@
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::endl;
 
 static int     ft_isloweralpha(int c)
 {
