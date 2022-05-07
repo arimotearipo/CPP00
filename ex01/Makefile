@@ -2,9 +2,9 @@ CC	= c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC1 = ex00.cpp
+SRC1 = phonebook.cpp
 
-EXE1 = megaphone
+EXE1 = phonebook
 
 all:	$(EXE1)
 
