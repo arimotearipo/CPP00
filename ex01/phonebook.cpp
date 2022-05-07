@@ -1,6 +1,7 @@
 #include <iostream>
 
 using	std::string;
+using	std::cin;
 using	std::cout;
 using	std::endl;
 
@@ -24,14 +25,27 @@ class	Contact
 
 class	PhoneBook
 {
-	Contact	contact[8];
+	public:
+		// Contact	contact[8];
+		// void	addcontact(Contact newcontact)
+		PhoneBook(Contact newcontact)
+		{
+			cout << "Enter first name" << endl;
+			cin >> newcontact.firstname;
+			cout << "Enter last name" << endl;
+			cin >> newcontact.lastname;
+			cout << "Enter nickname" << endl;
+			cin >> newcontact.nickname;
+			cout << "Enter phone number" << endl;
+			cin >> newcontact.phonenumber;
+			cout << "Enter darkest secret" << endl;
+			cin >> newcontact.secret;
+		}
 };
 
 int	main(void)
 {
-	Contact me("Wan", "ari", "ad", "0123", "killed a person");
-	Contact you("Walter", "White", "Heisenberg", "0000", "is a meth kingpin");
-	cout << me.secret << endl;
-	cout << you.nickname << you.secret << endl;
+	Contact	person("Wan", "Ari", "abc", "123", "no");
+	PhoneBook myPhonebook(person);
 	return (0);
 }
