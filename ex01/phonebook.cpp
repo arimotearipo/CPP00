@@ -4,6 +4,7 @@ using	std::string;
 using	std::cin;
 using	std::cout;
 using	std::endl;
+using	std::getline;
 
 class	Contact
 {
@@ -26,26 +27,31 @@ class	Contact
 class	PhoneBook
 {
 	public:
-		// Contact	contact[8];
-		// void	addcontact(Contact newcontact)
-		PhoneBook(Contact newcontact)
+		Contact	contact[8];
+		void	displaycontact(void)
 		{
-			cout << "Enter first name" << endl;
-			cin >> newcontact.firstname;
-			cout << "Enter last name" << endl;
-			cin >> newcontact.lastname;
-			cout << "Enter nickname" << endl;
-			cin >> newcontact.nickname;
-			cout << "Enter phone number" << endl;
-			cin >> newcontact.phonenumber;
-			cout << "Enter darkest secret" << endl;
-			cin >> newcontact.secret;
+			cout << "Index" << "First Name" << "Last Name" << endl;
 		}
 };
 
+/*
+The program should accept only three commands
+1. Add
+2. Search
+3. Display
+Therefore the phonebook class should have 3 member functions that does all these.
+*/
 int	main(void)
 {
-	Contact	person("Wan", "Ari", "abc", "123", "no");
-	PhoneBook myPhonebook(person);
-	return (0);
+	string	userinput;
+
+
+	while (1)
+	{
+		cout << "Enter something: " << endl;
+		getline(cin, userinput);
+		if (userinput.compare("done") == 0)
+			break ;
+		cout << userinput << endl;
+	}
 }

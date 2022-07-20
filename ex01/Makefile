@@ -2,16 +2,21 @@ CC	= c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC1 = phonebook.cpp
+SRC = phonebook.cpp
 
-EXE1 = phonebook
+OBJ = $(SRC:.cpp=.o)
 
-all:	$(EXE1)
+NAME = phonebook
 
-megaphone:	$(SRC1)
-			$(CC) $(FLAGS) $(SRC1) -o $(EXE1)
+all:	$(NAME)
+
+$(NAME):	$(OBJ)
+			$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean:
-		rm -rf $(EXE1)
+		rm -rf $(OBJ)
+
+fclean:	clean
+		rm -rf $(NAME)
 
 re:	clean all

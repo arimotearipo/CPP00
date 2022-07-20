@@ -3,14 +3,6 @@
 using std::cout;
 using std::endl;
 
-static int     ft_isloweralpha(int c)
-{
-        if (c >= 97 && c <= 122)
-                return (1);
-        else
-                return (0);
-}
-
 int	main(int ac, char **av)
 {
 	int		j;
@@ -27,7 +19,7 @@ int	main(int ac, char **av)
 		while (av[i][j] != '\0')
 		{
 			c = av[i][j];
-			if (ft_isloweralpha(av[i][j]))
+			if (islower(c) > 0)
 				c -= 32;
 			cout << c;
 			j++;

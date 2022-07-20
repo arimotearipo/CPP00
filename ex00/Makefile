@@ -2,16 +2,21 @@ CC	= c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC1 = megaphone.cpp
+SRC = megaphone.cpp
 
-EXE1 = megaphone
+OBJ = $(SRC:.cpp=.o)
 
-all:	$(EXE1)
+NAME = megaphone
 
-megaphone:	$(SRC1)
-			$(CC) $(FLAGS) $(SRC1) -o $(EXE1)
+all:	$(NAME)
+
+$(NAME):	$(OBJ)
+			$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean:
-		rm -rf $(EXE1)
+		rm -rf $(OBJ)
 
-re:	clean all
+fclean:	clean
+		rm -rf $(NAME)
+
+re:	fclean all
