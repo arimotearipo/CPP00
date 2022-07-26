@@ -5,6 +5,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 using std::setw;
+using std::isdigit;
 
 PhoneBook::PhoneBook(void)
 {
@@ -30,4 +31,18 @@ void	PhoneBook::addcontact(void)
 {
 	this->contact[this->index].createcontact();
 	this->index = (this->index + 1) % 8;
+}
+
+void	PhoneBook::searchcontact(void)
+{
+	string	index;
+
+	while (1)
+	{
+		getline(cin, index);
+		if (string_is_number(index) == 0)
+			continue;
+		else
+			break;
+	}
 }

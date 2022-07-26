@@ -30,6 +30,9 @@ int	main(void)
 		else if (userinput.compare("SEARCH") == 0)
 		{
 			phonebook.displaycontact();
+			phonebook.searchcontact();
 		}
+		else
+			cout << "Unknown command entered: " << userinput << endl;
 	}
 }
