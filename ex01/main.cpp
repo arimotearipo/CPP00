@@ -1,4 +1,5 @@
 #include "libs.hpp"
+#include "phonebook.class.hpp"
 
 using	std::string;
 using	std::cin;
@@ -20,10 +21,15 @@ int	main(void)
 
 	while (1)
 	{
-		cout << "Enter something: " << endl;
+		cout << "What do you want to do? : ";
 		getline(cin, userinput);
-		if (userinput.compare("done") == 0)
+		if (userinput.compare("EXIT") == 0)
 			break ;
-		cout << userinput << endl;
+		else if (userinput.compare("ADD") == 0)
+			phonebook.addcontact();
+		else if (userinput.compare("SEARCH") == 0)
+		{
+			phonebook.displaycontact();
+		}
 	}
 }

@@ -1,9 +1,10 @@
+#include "phonebook.class.hpp"
 #include "libs.hpp"
-#include <iostream>
 
 using std::cout;
 using std::cin;
 using std::endl;
+using std::setw;
 
 PhoneBook::PhoneBook(void)
 {
@@ -12,16 +13,21 @@ PhoneBook::PhoneBook(void)
 
 void	PhoneBook::displaycontact(void)
 {
+	cout << "Index" << setw(5) << "|";
+	cout << "First Name" << setw(0) << "|";
+	cout << "Last Name" << setw(1) << "|";
+	cout << "Nickname" << setw(2) << endl;
 	for (int i = 0; i < 8; i++)
 	{
 		cout << i;
-		cout << this->contact[i].get_firstname();
-		cout << this->contact[i].get_lastname();
-		cout << this->contact[i].get_nickname();
+		cout << this->contact[i].get_firstname() << setw(10) << "|";
+		cout << this->contact[i].get_lastname() << setw(10) << "|";
+		cout << this->contact[i].get_nickname() << setw(10) << "|" << endl;
 	}
 }
 
 void	PhoneBook::addcontact(void)
 {
-
+	this->contact[this->index].createcontact();
+	this->index = (this->index + 1) % 8;
 }

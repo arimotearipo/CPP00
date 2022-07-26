@@ -2,7 +2,8 @@
 # define LIBS_HPP
 
 #include <iostream>
-#include "phonebook.class.hpp"
-#include "contact.class.hpp"
+#include <string>
+#include <iomanip>
+#include <cstring>
 
 #endif

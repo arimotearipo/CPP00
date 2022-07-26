@@ -1,4 +1,5 @@
 #include "contact.class.hpp"
+#include "libs.hpp"
 
 using	std::string;
 using	std::cout;
