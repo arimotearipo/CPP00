@@ -1,8 +1,10 @@
 CC	= c++
 
+INCLUDES = -I phonebook.hpp
+
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = phonebook.cpp
+SRC = main.cpp contact.class.cpp phonebook.class.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
