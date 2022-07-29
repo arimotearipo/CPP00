@@ -4,7 +4,7 @@ INCLUDES = -I phonebook.hpp
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp contact.class.cpp phonebook.class.cpp
+SRC = main.cpp contact.class.cpp phonebook.class.cpp utilities.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

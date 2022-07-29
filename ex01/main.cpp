@@ -1,4 +1,4 @@
-#include "libs.hpp"
+#include "utilities.hpp"
 #include "phonebook.class.hpp"
 
 using	std::string;
@@ -21,7 +21,7 @@ int	main(void)
 
 	while (1)
 	{
-		cout << "What do you want to do? : ";
+		cout << "Select option : ADD / SEARCH / EXIT" << endl;
 		getline(cin, userinput);
 		if (userinput.compare("EXIT") == 0)
 			break ;
