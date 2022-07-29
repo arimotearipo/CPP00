@@ -5,16 +5,6 @@ using std::cout;
 using std::setw;
 using std::endl;
 
-int	string_is_number(string number)
-{
-	for (int i = 0; i < number.size(); i++)
-	{
-		if (isdigit(number[i]) == 0)
-			return (0);
-	}
-	return (1);
-}
-
 void	truncate(string todisplay)
 {
 	if (todisplay.length() > 10)
