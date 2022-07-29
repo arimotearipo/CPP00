@@ -1,6 +1,7 @@
 #include "phonebook.class.hpp"
 #include "utilities.hpp"
 
+using std::string;
 using std::cout;
 using std::cin;
 using std::endl;
@@ -14,16 +15,17 @@ PhoneBook::PhoneBook(void)
 
 void	PhoneBook::displaycontact(void)
 {
-	cout << "Index" << setw(5) << "|";
-	cout << "First Name" << setw(0) << "|";
-	cout << "Last Name" << setw(1) << "|";
-	cout << "Nickname" << setw(2) << endl;
+	cout << setw(10) << "Index" << "|";
+	cout << setw(10) << "First Name" << "|";
+	cout << setw(10) << "Last Name" << "|";
+	cout << setw(10) << "Nickname" << "|" << endl;
 	for (int i = 0; i < 8; i++)
 	{
-		cout << i;
-		cout << this->contact[i].get_firstname() << setw(10) << "|";
-		cout << this->contact[i].get_lastname() << setw(10) << "|";
-		cout << this->contact[i].get_nickname() << setw(10) << "|" << endl;
+		cout << setw(10) << i << "|";
+		truncate(this->contact[i].get_firstname());
+		truncate(this->contact[i].get_lastname());
+		truncate(this->contact[i].get_nickname());
+		cout << endl;
 	}
 }
 
@@ -36,13 +38,23 @@ void	PhoneBook::addcontact(void)
 void	PhoneBook::searchcontact(void)
 {
 	string	index;
+	int		i;
 
 	while (1)
 	{
+		cout << "Please select index of contact" << endl;
 		getline(cin, index);
-		if (string_is_number(index) == 0)
+		if (index.size() > 1 || (index[0] < '0' || index[0] > '7'))
 			continue;
 		else
-			break;
+		{
+			i = index[0] - '0';
+			cout << this->contact[i].get_firstname() << endl;
+			cout << this->contact[i].get_lastname() << endl;
+			cout << this->contact[i].get_nickname() << endl;
+			cout << this->contact[i].get_phonenumber() << endl;
+			cout << this->contact[i].get_darkestsecret() << endl;
+			break ;
+		}
 	}
 }

@@ -34,9 +34,15 @@ string	Contact::get_darkestsecret(void)
 string	Contact::get_contactinfo(string	field)
 {
 	string	userinput;
-	cout << "Enter " << field << ": ";
-
-	getline(cin, userinput);
+	while (1)
+	{
+		cout << "Enter " << field << ": ";
+		getline(cin, userinput);
+		if (userinput.empty() == true)
+			continue ;
+		else
+			break ;
+	}
 	return (userinput);
 }
 
