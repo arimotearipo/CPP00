@@ -42,7 +42,7 @@ void	PhoneBook::searchcontact(void)
 
 	while (1)
 	{
-		cout << "Please select index of contact" << endl;
+		cout << "Please select index of contact: ";
 		getline(cin, index);
 		if (index.size() > 1 || (index[0] < '0' || index[0] > '7'))
 			continue;
