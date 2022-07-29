@@ -9,7 +9,6 @@
 
 using std::string;
 
-int		string_is_number(string number);
 void	truncate(string todisplay);
 
 #endif
