@@ -10,5 +10,6 @@
 using std::string;
 
 void	truncate(string todisplay);
+bool	valid_phone_number(string phonenumber);
 
 #endif

@@ -40,6 +40,8 @@ string	Contact::get_contactinfo(string	field)
 		getline(cin, userinput);
 		if (userinput.empty() == true)
 			continue ;
+		else if (field == "phone number" && valid_phone_number(userinput) == false)
+			continue ;
 		else
 			break ;
 	}

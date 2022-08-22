@@ -12,3 +12,16 @@ void	truncate(string todisplay)
 	else
 		cout << setw(10) << todisplay << "|";
 }
+
+bool	valid_phone_number(string phonenumber)
+{
+	for (int i = 0; i < phonenumber.length(); i++)
+	{
+		if (isalpha(phonenumber[i]))
+		{
+			cout << "Invalid phone number" << endl;
+			return (false);
+		}
+	}
+	return (true);
+}
