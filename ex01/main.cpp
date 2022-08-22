@@ -23,7 +23,9 @@ int	main(void)
 	{
 		cout << "Select option : ADD / SEARCH / EXIT" << endl;
 		getline(cin, userinput);
-		if (userinput.compare("EXIT") == 0)
+		if (userinput.empty())
+			continue ;
+		else if (userinput.compare("EXIT") == 0)
 			break ;
 		else if (userinput.compare("ADD") == 0)
 			phonebook.addcontact();
