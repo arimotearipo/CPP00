@@ -1,8 +1,8 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-#include "utilities.hpp"
-#include "contact.class.hpp"
+#include "Utilities.hpp"
+#include "Contact.hpp"
 
 class	PhoneBook
 {

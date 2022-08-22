@@ -1,7 +1,7 @@
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-#include "utilities.hpp"
+#include "Utilities.hpp"
 
 using std::string;
 

@@ -1,5 +1,5 @@
-#include "phonebook.class.hpp"
-#include "utilities.hpp"
+#include "Phonebook.hpp"
+#include "Utilities.hpp"
 
 using std::string;
 using std::cout;

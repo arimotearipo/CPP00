@@ -1,5 +1,5 @@
-#include "contact.class.hpp"
-#include "utilities.hpp"
+#include "Contact.hpp"
+#include "Utilities.hpp"
 
 using	std::string;
 using	std::cout;
